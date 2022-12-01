@@ -1,3 +1,4 @@
+
 CREATE DATABASE loja;
 USE loja;
 
@@ -164,51 +165,84 @@ insert into cliente values (null,"cliene_9","number_usuario9","M","Inativo",9);
 /** / Insert Pedidos /**/
 /** /1/**/ 
 
-insert into pedido values (null,1,2,"2022-05-12","100.00");
+insert into pedido values (null,1,2,"2022-05-12","600.00");
 insert into item_pedido values (null,1,1,2,"100.00");
-insert into item_pedido values (null,1,2,30,"400.00");
+insert into item_pedido values (null,1,2,1,"400.00");
 /** /2/**/ 
 
-insert into pedido values (null,1,2,"2022-05-12","100.00");
+insert into pedido values (null,2,2,"2022-12-02","100.00");
 insert into item_pedido values (null,1,1,2,"100.00");
-insert into item_pedido values (null,1,2,30,"400.00");
+insert into item_pedido values (null,1,2,1,"400.00");
 /** /3/**/ 
 
-insert into pedido values (null,1,2,"2022-05-12","100.00");
+insert into pedido values (null,3,2,"2022-07-12","100.00");
 insert into item_pedido values (null,1,1,2,"100.00");
-insert into item_pedido values (null,1,2,30,"400.00");
+insert into item_pedido values (null,1,2,1,"400.00");
 /** /4/**/ 
 
-insert into pedido values (null,1,3,"2022-05-12","100.00");
-insert into item_pedido values (null,1,1,2,"100.00");
-insert into item_pedido values (null,1,2,30,"400.00");
+insert into pedido values (null,4,3,"2022-01-12","800.00");
+insert into item_pedido values (null,1,1,2,"700.00");
+insert into item_pedido values (null,1,2,1,"100.00");
 /** /5/**/ 
 
-insert into pedido values (null,1,3,"2022-05-12","100.00");
+insert into pedido values (null,4,3,"2022-05-06","600.00");
 insert into item_pedido values (null,1,1,2,"100.00");
-insert into item_pedido values (null,1,2,30,"400.00");
+insert into item_pedido values (null,1,2,1,"400.00");
 /** /6/**/ 
 
-insert into pedido values (null,1,3,"2022-05-12","100.00");
+insert into pedido values (null,5,3,"2022-03-12","100.00");
 insert into item_pedido values (null,1,1,2,"100.00");
-insert into item_pedido values (null,1,2,30,"400.00");
+insert into item_pedido values (null,1,2,1,"400.00");
 /** /7/**/ 
 
-insert into pedido values (null,1,1,"2022-05-12","100.00");
+insert into pedido values (null,6,1,"2022-05-12","300.00");
 insert into item_pedido values (null,1,1,2,"100.00");
-insert into item_pedido values (null,1,2,30,"400.00");
+insert into item_pedido values (null,1,2,1,"100.00");
 /** /8/**/ 
 
-insert into pedido values (null,1,1,"2022-05-12","100.00");
+insert into pedido values (null,7,1,"2022-04-12","600.00");
 insert into item_pedido values (null,1,1,2,"100.00");
-insert into item_pedido values (null,1,2,30,"400.00");
+insert into item_pedido values (null,1,2,1,"500.00");
 /** /9/**/ 
 
-insert into pedido values (null,1,1,"2022-05-12","100.00");
+insert into pedido values (null,8,1,"2022-12-12","100.00");
 insert into item_pedido values (null,1,1,2,"100.00");
-insert into item_pedido values (null,1,2,30,"400.00");
+insert into item_pedido values (null,1,2,1,"400.00");
 /** /10/**/ 
 
-insert into pedido values (null,1,1,"2022-05-12","100.00");
+insert into pedido values (null,9,1,"2022-05-12","100.00");
 insert into item_pedido values (null,1,1,2,"100.00");
-insert into item_pedido values (null,1,2,30,"400.00");
+insert into item_pedido values (null,1,2,4,"400.00");
+
+
+SELECT * FROM cliente WHERE status = "ativo" ;
+
+SELECT * FROM cliente WHERE status = "inativo";
+
+SELECT * FROM produto WHERE  id_categoria = "2";
+
+SELECT * FROM produto WHERE valor <= "200.00";
+
+SELECT * FROM cliente WHERE sexo = "F";
+
+SELECT * FROM pedido WHERE MONTH (dt_pedido) = MONTH(CURRENT_DATE());
+
+SELECT * FROM pedido WHERE DAY (dt_pedido) = day(CURRENT_DATE());
+
+SELECT * FROM pedido WHERE id_cliente ="2";
+
+SELECT nome FROM produto WHERE qtd < "50";
+
+
+SELECT min(valor) FROM produto;
+
+SELECT max(valor) FROM produto;
+
+
+
+
+
+
+
+
+
